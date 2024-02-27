@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="/main.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="/footer.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="/header.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="/edit.css"> <!-- Link to your main CSS file -->
+</head>
+<body>
+    <%- include('header') %>
+    <% if (yourblog.length == 0) { %>
+        <h1 class="no-blogs">No blogs available</h1>
+    <% } else { %>
+        <h1 class="edit-title">Edit your blogs here:</h1>
+        <form action="/verify" method="post" class="edit-form">
+            <label for="edit-title" class="form-label">Enter title</label>
+            <input type="text" name="id" id="edit-title" class="form-input" placeholder="Enter title">
+            <textarea name="editedBlog" id="edited-blog" class="form-textarea" cols="50" rows="20"><%= yourblog[index].Content %></textarea>
+            <button type="submit" class="btn btn-submit">Finish Editing</button>
+        </form>
+    <% } %>
+    <%- include('footer') %>
+</body>
+</html>

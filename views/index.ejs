@@ -1,0 +1,46 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your_Blog</title>
+    <link rel="stylesheet" href="/main.css"> <!-- Link to main CSS file -->
+</head>
+<body>
+    <%- include('header') %>
+    <div class="container">
+        <h2 class="section-title">Write Your Blog</h2>
+
+        <form action="/create" method="post" class="blog-form">
+            <label for="title" class="form-label">Enter the title of your blog</label>
+            <input type="text" name="title" id="title" class="form-input">
+            
+            <label for="blogcontent" class="form-label">Write your blog here:</label>
+            <textarea name="blogcontent" id="blogcontent" cols="50" rows="10" class="form-textarea"></textarea>
+            
+            <input type="submit" value="Create Blog" class="btn btn-primary">
+        </form>
+
+        <div class="section-links">
+            <form action="/view" method="get">
+                <input type="submit" value="View Blogs" class="btn btn-secondary">
+            </form>
+
+            <form action="/edit" method="post">
+                <label for="editTitle" class="form-label">Enter the title of the blog you want to edit</label>
+                <input type="text" name="id" id="editTitle" class="form-input">
+                <input type="submit" value="Edit Blogs" class="btn btn-secondary">
+            </form>
+
+            <form action="/delete" method="post">
+                <label for="deleteTitle" class="form-label">Enter the title of the blog you want to delete</label>
+                <input type="text" name="id" id="deleteTitle" class="form-input">
+                <input type="submit" value="Delete Blogs" class="btn btn-danger">
+            </form>
+        </div>
+    </div>
+
+    <%- include('footer') %> <!-- Include the footer -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.no-blogs {
+    text-align: center;
+    margin-top: 50px;
+    color: #f00; /* red color for no blogs */
+}
+
+.all-blogs {
+    text-align: center;
+    margin-top: 50px;
+    color:black; /* green color for all blogs */
+}
+
+.blog {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-content {
+    color: #666;
+}
+
+.blog-divider {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}

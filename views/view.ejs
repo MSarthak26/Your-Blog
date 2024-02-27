@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css"> <!-- Link to main CSS file -->
+    <link rel="stylesheet" href="/view.css">
+</head>
+<body>
+    <%- include('header') %>
+    <% if (yourblog.length==0) { %>
+     <h1 class="no-blogs">No blogs created</h1>
+    <% } else {%>
+    <h1 class="all-blogs">All blogs are available</h1>
+
+    <% for(var i=0;i<yourblog.length;i++){ %>
+        <div class="blog" id="blog-<%= i %>">
+            <h2 class="blog-title"><%= yourblog[i].Title %></h2>
+            <p class="blog-content"><%= yourblog[i].Content %></p>
+            <hr class="blog-divider">
+        </div>
+        <% } %>
+    <% } %>
+    <%- include('footer') %>
+</body>
+</html>
