@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/register.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('header') %>
+    <center>
+        <h1 id="heading">Welcome to Your-Blog</h1>
+        <p>Enter the following details to register yourself</p>
+        <form action="/createaccount" method="post">
+            <input type="text" name="username" placeholder="Enter your username"><br>
+            <input type="password" name="password" placeholder="password"><br>
+            <button type="submit">Register</button>
+        </form>
+    </center>
+    <%- include('footer') %>
+</body>
+</html>
